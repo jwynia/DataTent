@@ -18,7 +18,7 @@ namespace DataTent
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+
         }
 
         public IDocumentCollection<T> GetCollection<T>() where T : class
@@ -26,11 +26,6 @@ namespace DataTent
             var folder = Path.Combine(_baseFolderPath, typeof(T).Name);
             var collection = new DocumentCollection<T>(folder);
             return collection;
-        }
-
-        public void Reload()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

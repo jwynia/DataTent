@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jwynia/Projects/DataTent/DataTent/DataTent.csproj": {}
+    "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj": {}
   },
   "projects": {
-    "/Users/jwynia/Projects/DataTent/DataTent/DataTent.csproj": {
+    "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jwynia/Projects/DataTent/DataTent/DataTent.csproj",
+        "projectUniqueName": "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj",
         "projectName": "DataTent",
-        "projectPath": "/Users/jwynia/Projects/DataTent/DataTent/DataTent.csproj",
+        "projectPath": "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj",
         "packagesPath": "/Users/jwynia/.nuget/packages/",
-        "outputPath": "/Users/jwynia/Projects/DataTent/DataTent/obj/",
+        "outputPath": "/Users/jwynia/RiderProjects/DataTent/DataTent/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jwynia/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.4.21255.9/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/jwynia/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

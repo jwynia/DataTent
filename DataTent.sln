@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTent", "DataTent\DataTent.csproj", "{F72067D0-2DB6-41FC-9A5A-6260D9052F84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTent.Sandbox", "DataTent.Sandbox\DataTent.Sandbox.csproj", "{51FB15DA-AF36-43C2-A2A1-9DCDEF53B682}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F72067D0-2DB6-41FC-9A5A-6260D9052F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F72067D0-2DB6-41FC-9A5A-6260D9052F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F72067D0-2DB6-41FC-9A5A-6260D9052F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FB15DA-AF36-43C2-A2A1-9DCDEF53B682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FB15DA-AF36-43C2-A2A1-9DCDEF53B682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FB15DA-AF36-43C2-A2A1-9DCDEF53B682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FB15DA-AF36-43C2-A2A1-9DCDEF53B682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Bogus/34.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -10,10 +19,42 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "DataTent/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/DataTent.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataTent.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Bogus/34.0.2": {
+      "sha512": "2KQAuMn3fLAQ2r6jeiffZnpv0bi3GCW3iRB2v1KeHIEBu8MNTh9dBlLTZwGvM0pr+9doKkU8L5JgCURmTmT88A==",
+      "type": "package",
+      "path": "bogus/34.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.34.0.2.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/net6.0/Bogus.dll",
+        "lib/net6.0/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -40,11 +81,17 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "DataTent/1.0.0": {
+      "type": "project",
+      "path": "../DataTent/DataTent.csproj",
+      "msbuildProject": "../DataTent/DataTent.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Newtonsoft.Json >= 13.0.1"
+      "Bogus >= 34.0.2",
+      "DataTent >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,11 +100,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj",
-      "projectName": "DataTent",
-      "projectPath": "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj",
+      "projectUniqueName": "/Users/jwynia/RiderProjects/DataTent/DataTent.Sandbox/DataTent.Sandbox.csproj",
+      "projectName": "DataTent.Sandbox",
+      "projectPath": "/Users/jwynia/RiderProjects/DataTent/DataTent.Sandbox/DataTent.Sandbox.csproj",
       "packagesPath": "/Users/jwynia/.nuget/packages/",
-      "outputPath": "/Users/jwynia/RiderProjects/DataTent/DataTent/obj/",
+      "outputPath": "/Users/jwynia/RiderProjects/DataTent/DataTent.Sandbox/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jwynia/.nuget/NuGet/NuGet.Config"
@@ -71,7 +118,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj": {
+              "projectPath": "/Users/jwynia/RiderProjects/DataTent/DataTent/DataTent.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -84,9 +135,9 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Newtonsoft.Json": {
+          "Bogus": {
             "target": "Package",
-            "version": "[13.0.1, )"
+            "version": "[34.0.2, )"
           }
         },
         "imports": [

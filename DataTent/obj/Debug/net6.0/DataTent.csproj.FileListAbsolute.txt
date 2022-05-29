@@ -1,0 +1,12 @@
+/Users/jwynia/RiderProjects/DataTent/DataTent/bin/Debug/net6.0/DataTent.deps.json
+/Users/jwynia/RiderProjects/DataTent/DataTent/bin/Debug/net6.0/DataTent.dll
+/Users/jwynia/RiderProjects/DataTent/DataTent/bin/Debug/net6.0/DataTent.pdb
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.csproj.AssemblyReference.cache
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.AssemblyInfoInputs.cache
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.AssemblyInfo.cs
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.csproj.CoreCompileInputs.cache
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.dll
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/refint/DataTent.dll
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/DataTent.pdb
+/Users/jwynia/RiderProjects/DataTent/DataTent/obj/Debug/net6.0/ref/DataTent.dll
