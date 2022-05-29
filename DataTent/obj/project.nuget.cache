@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GJjTmKY2y8GM4EIhdf7tZgFgU44RdGsMUttwnCsT5Xjg7YksZam9R/ahRBUzapE0056P9n9Wlo8r/VCLMha9zA==",
+  "dgSpecHash": "jACSdFQXEZfcevkuWZS65qfHuxHxpKGq7wuvVCzpLjOpDCaVsdLLtlsWnx3MobBsLLXKgg6UuWVdrV241UUtOg==",
   "success": true,
   "projectFilePath": "/Users/jwynia/Projects/DataTent/DataTent/DataTent.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jwynia/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

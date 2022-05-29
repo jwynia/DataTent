@@ -1,23 +1,35 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace DataTent
 {
 	public class DocumentCollection<T>: IDocumentCollection<T>
 	{
+		private readonly string _folder;
+		private IList<T> _collection = new List<T>();
 		public DocumentCollection(string folder)
 		{
-			throw new NotImplementedException();
+			_folder = folder ?? throw new ArgumentNullException(nameof(folder));
+			var files = Directory.GetFiles(folder);
+			foreach (var file in files)
+			{
+				var serialized = File.ReadAllText(file);
+				var deserialized = JsonConvert.DeserializeObject<T>(serialized);
+				_collection.Add(deserialized);
+			}
 		}
 
 		public IEnumerable<T> AsQueryable()
 		{
-			throw new NotImplementedException();
+			return _collection.AsQueryable();
 		}
 
 		public IEnumerable<T> Find(Predicate<T> query)
 		{
-			throw new NotImplementedException();
+			return _collection.Where(t => query(t));
 		}
 
 		public T1 GetItem<T1>(Guid key)
