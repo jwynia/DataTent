@@ -21,6 +21,7 @@ foreach (var user in users)
 // {
 //     Console.WriteLine($"{user.FirstName}");
 // }
+
 Console.WriteLine(userCollection.Count);
 var randomToDelete = userCollection.AsQueryable().OrderBy(x => Guid.NewGuid()).Take(10);
 foreach (var delete in randomToDelete)

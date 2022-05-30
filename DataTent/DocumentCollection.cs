@@ -33,9 +33,13 @@ namespace DataTent
 
         public bool InsertOne(T item, string uniqueId)
         {
+            var fileName = Path.Combine(_folder, $"{uniqueId}.json");
+            if (File.Exists(fileName))
+            {
+                throw new ArgumentException($"Record already exists with uniqueId: {uniqueId}");
+            }
             _collection.Add(item);
             var serialized = JsonConvert.SerializeObject(item, Formatting.Indented);
-            var fileName = Path.Combine(_folder, $"{uniqueId}.json");
             File.WriteAllText(fileName, serialized);
             return true;
         }

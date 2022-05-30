@@ -403,3 +403,7 @@ BETA
 off
 
 .idea/
+*.cache
+DataTent.Sandbox/obj/Debug/net6.0/DataTent.Sandbox.csproj.AssemblyReference.cache
+DataTent.Sandbox/obj/Debug/net6.0/DataTent.Sandbox.dll
+DataTent.Sandbox/obj/Debug/net6.0/DataTent.Sandbox.pdb
