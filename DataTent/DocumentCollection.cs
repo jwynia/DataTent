@@ -21,7 +21,7 @@ namespace DataTent
             Load();
         }
         
-        public IEnumerable<T> AsQueryable()
+        public IQueryable<T> AsQueryable()
         {
             return _collection.AsQueryable();
         }

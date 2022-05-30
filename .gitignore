@@ -404,4 +404,5 @@ off
 .idea/
 *.cache
 DataTent.Sandbox/obj/
-.DS_Store/
+DataTent.Sandbox/.DS_Store
+.DS_Store
