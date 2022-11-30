@@ -27,5 +27,12 @@ namespace DataTent
             var collection = new DocumentCollection<T>(folder);
             return collection;
         }
+        
+        public IDocumentCollection<T> GetCollection<T>(string name) where T : class
+        {
+            var folder = Path.Combine(_baseFolderPath, name);
+            var collection = new DocumentCollection<T>(folder);
+            return collection;
+        }
     }
 }
