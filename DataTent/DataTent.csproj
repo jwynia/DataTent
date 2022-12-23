@@ -8,7 +8,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>DataTent</PackageId>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>J Wynia</Authors>
         <Company>J Wynia</Company>
         <Product>J Wynia</Product>

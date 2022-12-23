@@ -12,7 +12,7 @@ faker.RuleFor(u=>u.Id,(f,u)=>Guid.NewGuid());
 var users = faker.Generate(1000);
 foreach (var user in users)
 {
-     userCollection.InsertOne(user,user.Id.ToString());
+     userCollection.Insert(user,user.Id.ToString());
 }
 
 // Console.WriteLine(userCollection.Count);
@@ -26,7 +26,7 @@ Console.WriteLine(userCollection.Count);
 var randomToDelete = userCollection.AsQueryable().OrderBy(x => Guid.NewGuid()).Take(10);
 foreach (var delete in randomToDelete)
 {
-     userCollection.DeleteOne(delete.Id.ToString());
+     userCollection.Delete(delete.Id.ToString());
 }
 userCollection.Reload();
 
