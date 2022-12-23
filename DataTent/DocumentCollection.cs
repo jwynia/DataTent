@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Xml;
+using System.Text.Json;
 
 namespace DataTent
 {
@@ -10,9 +11,11 @@ namespace DataTent
     {
         private readonly string _folder;
         private IList<T> _collection = new List<T>();
+        private JsonSerializerOptions jsonSerializerOptions;
 
         public DocumentCollection(string folder)
         {
+            jsonSerializerOptions = new JsonSerializerOptions(){WriteIndented = true};
             _folder = folder ?? throw new ArgumentNullException(nameof(folder));
             if (!Directory.Exists(_folder))
             {
@@ -39,7 +42,7 @@ namespace DataTent
                 throw new ArgumentException($"Record already exists with uniqueId: {uniqueId}");
             }
             _collection.Add(item);
-            var serialized = JsonConvert.SerializeObject(item, Formatting.Indented);
+            var serialized = JsonSerializer.Serialize(item, jsonSerializerOptions);
             File.WriteAllText(fileName, serialized);
             return true;
         }
@@ -47,7 +50,8 @@ namespace DataTent
         public bool ReplaceOne(T item, string uniqueId)
         {
             _collection.Add(item);
-            var serialized = JsonConvert.SerializeObject(item, Formatting.Indented);
+            
+            var serialized = JsonSerializer.Serialize(item, jsonSerializerOptions);
             var fileName = Path.Combine(_folder, $"{uniqueId}.json");
             File.WriteAllText(fileName, serialized);
             return true;
@@ -57,7 +61,7 @@ namespace DataTent
         {
             var fileName = Path.Combine(_folder, $"{uniqueId}.json");
             var serialized = File.ReadAllText(fileName);
-            var toDelete = JsonConvert.DeserializeObject<T>(serialized);
+            var toDelete = JsonSerializer.Deserialize<T>(serialized);
             _collection.Remove(toDelete);
             File.Delete(fileName);
             return true;
@@ -77,7 +81,7 @@ namespace DataTent
             foreach (var file in files.Where(f=>f.EndsWith(".json")))
             {
                 var serialized = File.ReadAllText(file);
-                var deserialized = JsonConvert.DeserializeObject<T>(serialized);
+                var deserialized = JsonSerializer.Deserialize<T>(serialized);
                 _collection.Add(deserialized);
             }
         }

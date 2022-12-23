@@ -1,11 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>DataTent</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>J Wynia</Authors>
+        <Company>J Wynia</Company>
+        <Product>J Wynia</Product>
+        <Description>
+            DataTent is a simple JSON datastore that uses a folder per data type. 
+            It's intended for small projects and prototyping. 
+            In a similar way to how a tent is intended for quick, temporary shelter.
+            Most of the features you're about to ask for are trying to turn a tent into a house.
+            As soon as you find yourself reaching for those other features, take the neatly formatted JSON files from this and import them into a more premanent datastore.
+            Suggestions for how to make it a better **tent** are welcome.
+        </Description>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="System.Text.Json" Version="7.0.1" />
     </ItemGroup>
 
 </Project>
