@@ -34,7 +34,7 @@ namespace DataTent
             return _collection.Where(t => query(t));
         }
 
-        public bool InsertOne(T item, string uniqueId)
+        public bool Insert(T item, string uniqueId)
         {
             var fileName = Path.Combine(_folder, $"{uniqueId}.json");
             if (File.Exists(fileName))
@@ -47,7 +47,7 @@ namespace DataTent
             return true;
         }
 
-        public bool ReplaceOne(T item, string uniqueId)
+        public bool Replace(T item, string uniqueId)
         {
             _collection.Add(item);
             
@@ -57,7 +57,7 @@ namespace DataTent
             return true;
         }
 
-        public bool DeleteOne(string uniqueId)
+        public bool Delete(string uniqueId)
         {
             var fileName = Path.Combine(_folder, $"{uniqueId}.json");
             var serialized = File.ReadAllText(fileName);
