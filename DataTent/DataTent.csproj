@@ -8,10 +8,12 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>DataTent</PackageId>
-        <Version>0.1.1</Version>
+        <Version>0.1.2</Version>
         <Authors>J Wynia</Authors>
         <Company>J Wynia</Company>
         <Product>J Wynia</Product>
+        <RepositoryUrl>https://github.com/jwynia/DataTent</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
         <Description>
             DataTent is a simple JSON datastore that uses a folder per data type. 
             It's intended for small projects and prototyping. 
